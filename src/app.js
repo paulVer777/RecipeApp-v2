@@ -9,8 +9,6 @@ import {addRecipe} from './actions/recipeActions'
 
 const store = getStore()
 
-store.dispatch(addRecipe({title:'Lasagne', preparationTime:60, instructions:'sdas'}))
-
 store.subscribe(()=> console.log(store.getState()))
 
 const jsx = (

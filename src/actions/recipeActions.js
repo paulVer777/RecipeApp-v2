@@ -1,8 +1,9 @@
 
-const addRecipe = () => (
+const addRecipe = (id) => (
     {
         type:'ADD_RECIPE',
         recipe:{
+            id:id,
             title:'',
             preparationTime:null,
             instructions:'',
@@ -12,4 +13,12 @@ const addRecipe = () => (
     }
 )
 
-export {addRecipe}
+const editRecipe = (id, recipe) => (
+    {
+        type:'EDIT_RECIPE',
+        id,
+        recipe 
+    }
+)
+
+export {addRecipe, editRecipe}
