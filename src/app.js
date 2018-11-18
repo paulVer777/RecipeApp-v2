@@ -5,7 +5,6 @@ import './styles/styles.scss'
 import AppRouter from './routes/AppRouter'
 import getStore from './store/store'
 import {Provider} from 'react-redux'
-import {addRecipe} from './actions/recipeActions'
 
 const store = getStore()
 

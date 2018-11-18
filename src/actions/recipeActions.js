@@ -4,7 +4,7 @@ const addRecipe = (id) => (
         type:'ADD_RECIPE',
         recipe:{
             id:id,
-            title:'',
+            title:'Unknown',
             preparationTime:null,
             instructions:'',
             difficulty:'easy',
