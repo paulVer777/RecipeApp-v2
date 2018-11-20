@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import RecipeForm from './RecipeForm';
 import { editRecipe } from '../actions/recipeActions';
 
-
 const RecipeEditor2 = (props) => (
     <div>
         <RecipeForm 
@@ -13,7 +12,6 @@ const RecipeEditor2 = (props) => (
         
     </div>
 )
-
 
 const mapStateToProps = (state, props) => (
     {

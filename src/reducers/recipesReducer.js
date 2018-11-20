@@ -15,6 +15,19 @@ const recipesReducer = (state = recipes, action) => {
             {
             return state.filter((value,index) => action.id !== value.id)
             }
+        case 'ADD_INGREDIENT':
+            {
+                return state.map((value,index) => {
+
+                   return action.id === value.id ? 
+                    {
+                        ...value,
+                        ingredients:[...value.ingredients,{...action.ingredient}]
+                    }
+                    :
+                    value
+                })
+            }
         default:
             return state
         }
