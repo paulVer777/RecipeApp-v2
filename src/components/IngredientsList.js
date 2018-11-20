@@ -1,11 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import IngredientsListItem from '../components/IngredientsListItem'
 
 const IngredientsList = (props) => (
     <div className = 'ingredient-list' >
-        { !props.recipe ? 'You have no ingredients added yet' 
-        : 
-        props.recipe.ingredients.map((value,index) => <div>{value.title}</div>)}        
+        <h3>Ingredients</h3>
+        { props.recipe.ingredients.length < 1 ? 'You have no ingredients added yet' 
+            : 
+        props.recipe.ingredients.map((value,index) => <IngredientsListItem  data = {value} key = {value.id} />)}        
     </div>
 )
 

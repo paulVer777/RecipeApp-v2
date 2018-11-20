@@ -28,6 +28,5 @@ render(){
 }
 }
 
-
 export default connect()(IngredientsForm)
  
