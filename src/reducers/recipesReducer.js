@@ -1,4 +1,3 @@
-import { locale } from "moment";
 
 const recipes = []
 

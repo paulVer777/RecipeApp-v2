@@ -5,10 +5,10 @@ export default class RecipeForm extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            title:'',
-            preparationTime:'',
-            instructions:'',
-            difficulty:'easy',
+            title: props.data ? props.data.title : '',
+            preparationTime:props.data ? props.data.preparationTime : '',
+            instructions:props.data ? props.data.instructions : '',
+            difficulty:props.data ? props.data.difficulty : '',
         }
     }
 
@@ -27,15 +27,14 @@ export default class RecipeForm extends React.Component {
         
     )}
 
-
     render(){
         return (
             <div>
                 <form onSubmit = {this.onSubmitHandler}>
-                    <input type = 'text' placeholder = 'title' name = 'title' onChange = {this.onEventHandler} />
-                    <input type = 'text' placeholder = 'preparation time' name = 'preparationTime' onChange = {this.onEventHandler}/>
-                    <textarea type = 'text' placeholder = 'instructions' name = 'instructions' onChange = {this.onEventHandler}/>
-                    <select name = 'difficulty' onChange = {this.onEventHandler}  >
+                    <input type = 'text' placeholder = 'title' name = 'title' value = {this.state.title} onChange = {this.onEventHandler} />
+                    <input type = 'text' placeholder = 'preparation time' name = 'preparationTime' value = {this.state.preparationTime} onChange = {this.onEventHandler}/>
+                    <textarea type = 'text' placeholder = 'instructions' name = 'instructions' value = {this.state.instructions} onChange = {this.onEventHandler}/>
+                    <select name = 'difficulty' value = {this.state.difficulty} onChange = {this.onEventHandler}  >
                         <option>Easy</option>
                         <option>Medium</option>
                         <option>Hard</option>
