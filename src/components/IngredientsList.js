@@ -7,7 +7,7 @@ const IngredientsList = (props) => (
         <h3>Ingredients</h3>
         { props.recipe.ingredients.length < 1 ? 'You have no ingredients added yet' 
             : 
-        props.recipe.ingredients.map((value,index) => <IngredientsListItem  data = {value} key = {value.id} />)}        
+        props.recipe.ingredients.map((value,index) => <IngredientsListItem  data = {value} key = {value.id} recipeId = {props.id} />)}        
     </div>
 )
 

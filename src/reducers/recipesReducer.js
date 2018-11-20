@@ -28,6 +28,22 @@ const recipesReducer = (state = recipes, action) => {
                     value
                 })
             }
+        case 'REMOVE_INGREDIENT':
+            {
+                console.log(action.recipeId,action.ingredientId)
+
+                return state.map((value,index) => {
+
+                    return action.recipeId === value.id ?
+                    {
+                        ...value,
+                        ingredients:value.ingredients.filter((value,index) => value.id !== action.ingredientId)
+                    }
+                    :
+                    value
+                })
+            }
+        
         default:
             return state
         }
