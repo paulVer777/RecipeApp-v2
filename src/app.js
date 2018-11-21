@@ -7,7 +7,6 @@ import getStore from './store/store'
 import {Provider} from 'react-redux'
 import { addRecipe, addIngredient } from './actions/recipeActions';
 
-
 const store = getStore()
 
 store.subscribe(()=> console.log(store.getState()))

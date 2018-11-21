@@ -2,14 +2,21 @@ import React from 'react'
 import { connect } from 'react-redux';
 import RecipeForm from './RecipeForm';
 import { editRecipe } from '../actions/recipeActions';
+import IngredientsList from './IngredientsList';
+import IngredientsForm from './IngredientsForm';
 
 const RecipeEditor2 = (props) => (
-    <div>
+    <div className = 'recipe-editor2'>
         <RecipeForm 
         data = {props.recipe}
         submitter = { (obj) => props.dispatch(editRecipe(props.match.params.id, obj))}
         />
-        
+        <IngredientsList 
+        id = {props.match.params.id}
+        />
+        <IngredientsForm 
+            id = {props.match.params.id}
+        />
     </div>
 )
 

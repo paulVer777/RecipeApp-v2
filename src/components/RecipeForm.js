@@ -8,7 +8,7 @@ export default class RecipeForm extends React.Component {
             title: props.data ? props.data.title : '',
             preparationTime:props.data ? props.data.preparationTime : '',
             instructions:props.data ? props.data.instructions : '',
-            difficulty:props.data ? props.data.difficulty : '',
+            difficulty:props.data ? props.data.difficulty : 'easy',
         }
     }
 
@@ -35,9 +35,9 @@ export default class RecipeForm extends React.Component {
                     <input type = 'text' placeholder = 'preparation time' name = 'preparationTime' value = {this.state.preparationTime} onChange = {this.onEventHandler}/>
                     <textarea type = 'text' placeholder = 'instructions' name = 'instructions' value = {this.state.instructions} onChange = {this.onEventHandler}/>
                     <select name = 'difficulty' value = {this.state.difficulty} onChange = {this.onEventHandler}  >
-                        <option>Easy</option>
-                        <option>Medium</option>
-                        <option>Hard</option>
+                        <option value = 'easy'>Easy</option>
+                        <option value = 'medium' >Medium</option>
+                        <option value = 'hard' >Hard</option>
                     </select>
                 </form>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect} from 'react-redux'
 import RecipeListItem from './RecipeListItem';
-
+import { filtrator } from './selectors/filtrator';
 
 const RecipeList = (props) => (
     <div className = 'recipe-list'>
@@ -14,7 +14,7 @@ const RecipeList = (props) => (
 
 const mapStateToProps = (state) => (
     {
-        recipes:state.recipes
+        recipes:filtrator(state.recipes,state.filters)
     }
 )
 
