@@ -5,7 +5,7 @@ import Filters from './Filters';
 
 const Dashboard = () => (
     <div className = 'dashboard'>
-        <h2>Dasboard</h2>
+        <h2>Dashboard</h2>
         <RecipeCreator />
         <Filters />
         <RecipeList />

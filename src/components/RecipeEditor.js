@@ -19,7 +19,7 @@ const RecipeEditor = (props) => (
         <IngredientsForm 
             id = {props.match.params.id}
         />
-        <Link to = '/' > Done </Link>
+        <Link to = '/' className = 'btn' > Done </Link>
     </div>
 
 )

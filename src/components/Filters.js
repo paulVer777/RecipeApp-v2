@@ -25,7 +25,7 @@ class Filters extends React.Component {
                     <option value = 'medium'>Medium</option>
                     <option value = 'hard'>Hard</option>
                 </select>
-                <select name = 'sortBy' onChange = {this.onEventHandler} >
+                <select name = 'sortBy' value = {this.state.sortBy} onChange = {this.onEventHandler} >
                     <option value = 'alphabetical'>Alphabetical</option>
                     <option value = 'preparationTime'>Preparation Time</option>
                 </select>

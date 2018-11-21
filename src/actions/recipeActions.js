@@ -5,7 +5,7 @@ const addRecipe = (id) => (
         recipe:{
             id:id,
             title:'Unknown',
-            preparationTime:null,
+            preparationTime:'',
             instructions:'',
             difficulty:'easy',
             ingredients:[]

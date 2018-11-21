@@ -4,6 +4,7 @@ import RecipeForm from './RecipeForm';
 import { editRecipe } from '../actions/recipeActions';
 import IngredientsList from './IngredientsList';
 import IngredientsForm from './IngredientsForm';
+import {Link} from 'react-router-dom'
 
 const RecipeEditor2 = (props) => (
     <div className = 'recipe-editor2'>
@@ -17,6 +18,7 @@ const RecipeEditor2 = (props) => (
         <IngredientsForm 
             id = {props.match.params.id}
         />
+        <Link to = '/' className = 'btn'> Done </Link>
     </div>
 )
 
