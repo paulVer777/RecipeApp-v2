@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { changeFilters } from '../actions/filterAction';
 
 class Filters extends React.Component {
     
@@ -12,7 +13,7 @@ class Filters extends React.Component {
     onEventHandler = (event) => {
         const data = event.target.value
         const propertyName = event.target.name
-        this.setState((prevState) => ({[propertyName]:data}), ()=> this.props.dispatch({type:'CHANGE_FILTERS',filters:this.state}))
+        this.setState((prevState) => ({[propertyName]:data}), ()=> this.props.changeFilters(this.state))
     }
 
     render(){
@@ -34,4 +35,14 @@ class Filters extends React.Component {
     }
 }
 
-export default connect()(Filters)
+
+const mapDispatchToProps = (dispatch) => (
+    {
+        changeFilters:(data) => dispatch(changeFilters(data))
+    }
+)
+
+
+
+
+export default connect(undefined,mapDispatchToProps)(Filters)

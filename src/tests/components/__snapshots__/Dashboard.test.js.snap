@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Dashboard correctly 1`] = `
+<div
+  className="dashboard"
+>
+  <h2>
+    Dashboard 
+  </h2>
+  <Connect(RecipeCreator) />
+  <Connect(Filters) />
+  <Connect(RecipeList) />
+</div>
+`;

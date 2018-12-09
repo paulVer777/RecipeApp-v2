@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { addIngredient } from '../actions/recipeActions';
 import uuidv4 from 'uuid'
 
-class IngredientsForm extends React.Component {
+ export class IngredientsForm extends React.Component {
 
 state = {
     text: ''
@@ -12,7 +12,7 @@ state = {
 onSubmitHandler = (event) => {
         event.preventDefault()
         const data = event.target.elements.text.value
-        this.setState((prevState) => ({text:data}),() => this.props.dispatch(addIngredient(this.props.id,{title:this.state.text, id:uuidv4()})))
+        this.setState((prevState) => ({text:data}),() => this.props.addIngredient(this.props.id,{title:data, id:2}))
         
 }
 
@@ -28,5 +28,10 @@ render(){
 }
 }
 
-export default connect()(IngredientsForm)
+
+const mapDispatchToProps = (dispatch) => ({
+    addIngredient:(id,ingredientObj)=> dispatch(addIngredient(id,ingredientObj))
+})
+
+export default connect(undefined,mapDispatchToProps)(IngredientsForm)
  

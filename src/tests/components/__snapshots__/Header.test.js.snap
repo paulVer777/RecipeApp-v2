@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render header correctly 1`] = `
+<div
+  className="header"
+>
+  <Link
+    replace={false}
+    to="/"
+  >
+    Home
+  </Link>
+  <Link
+    replace={false}
+    to="/my-ingredients"
+  >
+    My Ingredients
+  </Link>
+</div>
+`;

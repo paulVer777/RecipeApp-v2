@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render IngredientsForm correctly 1`] = `
+<div
+  className="ingredient-form"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="text"
+      placeholder="ingredient name"
+      type="text"
+    />
+    <button>
+      Add Ingredient
+    </button>
+  </form>
+</div>
+`;
