@@ -11,7 +11,7 @@ const RecipeEditor = (props) => (
     <div className = 'recipe-editor'>
         <h1>Recipe Editor</h1>
         <RecipeForm 
-            submitter = {(obj) => props.dispatch(editRecipe(props.match.params.id, obj))}
+            submitter = {props.editRecipe}
         />
         <IngredientsList 
             id = {props.match.params.id}
@@ -24,4 +24,9 @@ const RecipeEditor = (props) => (
 
 )
     
-export default connect()(RecipeEditor)
+const mapDispatchToProps = (dispatch) => ({
+    editRecipe: (obj) => dispatch(editRecipe(obj))
+})
+
+
+export default connect(undefined, mapDispatchToProps)(RecipeEditor)

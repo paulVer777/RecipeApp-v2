@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render recipe form correctly 1`] = `
+<div
+  className="recipe-form"
+>
+  <form>
+    <input
+      name="title"
+      onChange={[Function]}
+      placeholder="title"
+      type="text"
+      value=""
+    />
+    <input
+      name="preparationTime"
+      onChange={[Function]}
+      placeholder="preparation time"
+      type="number"
+      value=""
+    />
+    <textarea
+      name="instructions"
+      onChange={[Function]}
+      placeholder="instructions"
+      type="text"
+      value=""
+    />
+    <select
+      name="difficulty"
+      onChange={[Function]}
+      value="easy"
+    >
+      <option
+        value="easy"
+      >
+        Easy
+      </option>
+      <option
+        value="medium"
+      >
+        Medium
+      </option>
+      <option
+        value="hard"
+      >
+        Hard
+      </option>
+    </select>
+  </form>
+</div>
+`;
+
+exports[`Should render recipe form with passed data 1`] = `
+<div
+  className="recipe-form"
+>
+  <form>
+    <input
+      name="title"
+      onChange={[Function]}
+      placeholder="title"
+      type="text"
+      value="chili"
+    />
+    <input
+      name="preparationTime"
+      onChange={[Function]}
+      placeholder="preparation time"
+      type="number"
+      value={20}
+    />
+    <textarea
+      name="instructions"
+      onChange={[Function]}
+      placeholder="instructions"
+      type="text"
+      value="asdasdazxczxczxczczxczxczczxczczxczxx"
+    />
+    <select
+      name="difficulty"
+      onChange={[Function]}
+      value="medium"
+    >
+      <option
+        value="easy"
+      >
+        Easy
+      </option>
+      <option
+        value="medium"
+      >
+        Medium
+      </option>
+      <option
+        value="hard"
+      >
+        Hard
+      </option>
+    </select>
+  </form>
+</div>
+`;

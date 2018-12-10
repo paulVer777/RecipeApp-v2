@@ -30,7 +30,7 @@ export default class RecipeForm extends React.Component {
     render(){
         return (
             <div className = 'recipe-form' >
-                <form onSubmit = {this.onSubmitHandler}>
+                <form>
                     <input type = 'text' placeholder = 'title' name = 'title' value = {this.state.title} onChange = {this.onEventHandler} />
                     <input type = 'number' placeholder = 'preparation time' name = 'preparationTime' value = {this.state.preparationTime} onChange = {this.onEventHandler}/>
                     <textarea type = 'text' placeholder = 'instructions' name = 'instructions' value = {this.state.instructions} onChange = {this.onEventHandler}/>
